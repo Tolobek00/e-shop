@@ -1,0 +1,170 @@
+@import "../../Styles/mixin";
+
+.checkout_container-empty {
+  padding-bottom: 50px;
+  .title-cart {
+    font-size: 30px;
+    padding: 50px 0;
+  }
+  .cart_inside {
+    @include flexbox(space-between, flex-start);
+    width: 100%;
+    .checkout_left {
+      @include flexbox(center, flex-start, column);
+      gap: 15px;
+      .cart-left_item {
+        @include flexbox(space-between, flex-start, column);
+        gap: 15px;
+        width: 900px;
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.315);
+        // border: 1px solid rgba(128, 128, 128, 0.338);
+        padding: 15px;
+        .billinig_dropdown {
+          width: 100%;
+          @include flexbox(space-between, center);
+          transition: 0.3s;
+          h3 {
+            font-size: 20px;
+          }
+        }
+        .billing-info {
+          @include flexbox(space-between, flex-start, column);
+          gap: 15px;
+          width: 100%;
+          transition: 0.3s;
+
+          div {
+            width: 100%;
+            section {
+              @include flexbox(center, flex-start, column);
+              gap: 6px;
+              label {
+                font-weight: 400;
+              }
+              input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid rgba(128, 128, 128, 0.336);
+              }
+            }
+          }
+          .payment_method {
+            @include flexbox(center, flex-start, column);
+            gap: 10px;
+            section {
+              @include flexbox(flex-start, center);
+              padding: 0 10px;
+              input {
+                width: 20px;
+              }
+            }
+          }
+          .debit_payment {
+            @include flexbox(center, flex-start, column);
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.039);
+            padding: 25px 15px 45px 15px;
+            border-radius: 5px;
+            h3 {
+              font-size: 20px;
+              font-weight: 600;
+              margin-bottom: 20px;
+            }
+            div {
+              width: 100%;
+            }
+            .card_Info {
+              @include flexbox(center, flex-start, column);
+              gap: 10px;
+              input {
+                width: 100%;
+                padding: 10px;
+              }
+            }
+            .date_cvv {
+              @include flexbox(center, flex-start);
+              gap: 20px;
+              div {
+                @include flexbox(center, flex-start, column);
+                gap: 10px;
+                input {
+                  padding: 10px;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .subtotal_container {
+      @include flexbox(space-between, flex-start, column);
+      box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.315);
+      width: 350px;
+      padding: 20px;
+      border-radius: 10px;
+      gap: 25px;
+      h3 {
+        font-size: 23px;
+      }
+      .order-sumary {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.331);
+        padding: 5px 0;
+        .order-item {
+          @include flexbox(space-between, center);
+          .inside-order {
+            width: 100%;
+            @include flexbox(flex-start, center);
+            gap: 15px;
+            .product_img {
+              @include flexbox(center, center);
+              width: 70px;
+              height: 80px;
+              img {
+                max-width: 50px;
+                max-height: 75px;
+              }
+            }
+            div {
+              @include flexbox(space-between, space-between, column);
+              gap: 10px;
+              h4 {
+                font-weight: 700;
+              }
+              p {
+                font-weight: 400;
+              }
+            }
+          }
+          .total-item {
+            font-weight: 400;
+          }
+        }
+      }
+      .total-price {
+        width: 100%;
+        div {
+          @include flexbox(space-between, center);
+          span:first-child {
+            font-weight: 400;
+            font-size: 18px;
+          }
+          span:nth-child(2) {
+            font-weight: 650;
+          }
+        }
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background: red;
+        color: white;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

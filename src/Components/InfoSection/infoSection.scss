@@ -1,0 +1,35 @@
+@import "../../Styles/mixin";
+
+.infoSection {
+    div {
+        margin-top: 50px;
+        @include flexbox (space-between, center);
+        gap: 15px;
+        .item {
+            @include flexbox (flex-start, center, column);
+            gap: 15px;
+            text-align: center;
+            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.301);
+            border-radius: 5px;
+            width: 20%;
+            height: 200px;
+            padding: 25px 18px;
+            transition: .3s;
+            &:hover {
+                transform: scale(1.03);
+            }
+            section {
+                color: rgb(219, 20, 20);
+                font-size: 25px;
+            }
+            h3 {
+                font-size: 20px;
+                color: black;
+            }
+            p {
+                color:  rgba(0, 0, 0, 0.587);
+                font-weight: 400;
+            }
+        }
+    }
+}

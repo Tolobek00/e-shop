@@ -1,0 +1,152 @@
+@import "../../Styles/mixin";
+
+.cart_container-empty {
+  padding-bottom: 50px;
+  .title-cart {
+    font-size: 30px;
+    padding: 50px 0;
+  }
+  .cart_inside {
+    .container_in-cart {
+      @include flexbox(space-between, flex-start);
+      .cart-left_item {
+        @include flexbox(space-between, center, column);
+        width: 900px;
+
+        .cart_titles {
+          width: 100%;
+          @include flexbox(space-between, center);
+          p {
+            font-weight: 650;
+            line-height: 20px;
+          }
+          div {
+            @include flexbox(space-between, center);
+            gap: 30px;
+          }
+        }
+        .cart_products {
+          @include flexbox(center, flex-start, column);
+          gap: 25px;
+          width: 100%;
+          .cart_product {
+            @include flexbox(space-between, center);
+            box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.459);
+            border-radius: 15px;
+            width: 100%;
+            height: 150px;
+            .product_images {
+              @include flexbox(flex-start, center);
+              gap: 10px;
+              height: 100px;
+              .for_img_container {
+                width: 100px;
+                height: 90%;
+                @include flexbox(center, center);
+                img {
+                  max-height: 90%;
+                  max-width: 80px;
+                }
+              }
+              h3 {
+                font-weight: bold;
+                font-size: 20px;
+              }
+            }
+            .product_prices {
+              @include flexbox(space-between, center);
+              width: 350px;
+              padding-right: 10px;
+              .quantity {
+                @include flexbox(space-between, center);
+                button {
+                  padding: 10px;
+                  border: 1px solid rgba(0, 0, 0, 0.409);
+                  background: none;
+                }
+                p {
+                  padding: 10px;
+                  border: 1px solid rgba(0, 0, 0, 0.406);
+                }
+              }
+            }
+            .delete_btn {
+              color: red;
+              background: none;
+              cursor: pointer;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      .subtotal_container {
+        @include flexbox (space-between, flex-start, column);
+        box-shadow: 0 1px 1px 1px  rgba(0, 0, 0, 0.315);
+        width: 310px;
+        padding: 20px;
+        border-radius: 10px;
+        gap: 25px;
+        .total_title {
+          font-size: 20px;
+        }
+        .total_items {
+          @include flexbox (space-between, center);
+          width: 100%;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.363);
+          padding: 10px 0;
+          span:first-child {
+            text-transform: uppercase;
+            font-weight: 400;
+          }
+          // gap: 25px;
+        }
+        .shipping {
+          @include flexbox (space-between, flex-start, column);
+          gap: 15px;
+          width: 100%;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.466);
+          padding: 10px 0;
+          .shipping_title {
+            font-size: 20px;
+          }
+          span {
+            @include flexbox(flex-start, center);
+            gap: 5px;
+            p {
+              font-size: 18px;
+              font-weight: 400;
+            }
+          }
+          button {
+            background: none;
+            color: rgb(0, 157, 255);
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .total-price {
+          @include flexbox (space-between, center);
+          width: 100%;
+        }
+        .proced_btn {
+          width: 100%;
+          padding: 10px 0;
+          background: red;
+          color: white;
+        }
+      }
+    }
+  }
+  .empty-cart {
+    @include flexbox(center, center, column);
+    padding: 50px 0;
+    .btn {
+        width: 200px;
+        padding: 10px 0;
+        background: red;
+        color: white;
+        text-align: center;
+    }
+  }
+}

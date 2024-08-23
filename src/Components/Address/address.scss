@@ -1,0 +1,35 @@
+@import "../../Styles/mixin";
+
+.address {
+    @include flexbox (space-between, flex-end, column);
+    gap: 20px;
+    input {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid gray;
+        border-radius: 10px;
+    }
+    div {
+        @include flexbox (flex-end, center);
+        gap: 10px;
+        button {
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            font-weight: 52 0;
+            &:first-child {
+                background: gray;
+                &:hover {
+                    background: rgba(128, 128, 128, 0.657);
+                }
+            }
+            &:nth-child(2) {
+                background: rgb(0, 162, 255);
+                &:hover {
+                    background: rgba(0, 162, 255, 0.557);
+                    
+                }
+            }
+        }
+    }
+}

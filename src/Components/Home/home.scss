@@ -1,0 +1,78 @@
+@import "../../Styles/mixin";
+
+main {
+    margin-top: 50px;
+  background-color: white;
+  //   @include flexbox(center, center);
+  .main_container {
+    @include flexbox(flex-start, flex-start);
+    gap: 15px;
+    .shop_container {
+      width: 30%;
+      div:first-child {
+        div {
+          background: red;
+          color: white;
+          padding: 15px 10px;
+        }
+      }
+      div:nth-child(2) {
+        // width: 30%;
+        background: rgba(128, 128, 128, 0.116);
+        ul {
+            padding: 20px 15px;
+            @include flexbox (center, flex-start, column);
+            gap: 25px;
+          li {
+            @include flexbox(flex-start, center);
+            gap: 5px;
+            .circle {
+              font-size: 10px;
+              color: red;
+            }
+          }
+        }
+      }
+    }
+    .hero_banner {
+      position: relative;
+      width: 100%;
+      img {
+        // object-fit: cover;
+        background-size: cover;
+        background-position: left;
+          width: 100%;
+          height: 450px;
+      }
+      .texts {
+        position: absolute;
+        top: 105px;
+        left: 35px;
+        @include flexbox(center, flex-start, column);
+        gap: 25px;
+        p {
+            color: rgba(0, 0, 0, 0.589);
+        }
+        h2 {
+            font-size: 35px;
+            color:  black;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 20px;
+        }
+        button {
+            padding: 10px 30px;
+            background: red;
+            color:  white;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                transform: scale(1.05);
+                background: rgb(227, 12, 12);
+            }
+        }
+      }
+    }
+  }
+}

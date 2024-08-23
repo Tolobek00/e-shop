@@ -1,0 +1,75 @@
+@import "../../Styles/mixin";
+
+.productCard {
+  @include flexbox(center, center, column);
+  gap: 10px;
+  padding: 20px 0;
+  height: 300px;
+  width: 100%;
+  border: 1px solid black;
+  transition: 0.3s;
+  h3 {
+    text-align: flex-start;
+  }
+  &:hover {
+    transform: scale(1.02);
+  }
+  .img-container {
+    height: 300px;
+    img {
+      width: 70%;
+      max-height: 200px;
+    }
+  }
+  .stars {
+    @include flexbox(space-between, center);
+    gap: 15px;
+    width: 80%;
+
+    div:first-child {
+      .star {
+        color: rgb(214, 158, 16);
+      }
+    }
+    div:nth-child(2) {
+      position: relative;
+      cursor: pointer;
+      span {
+        padding: 5px 10px;
+        font-weight: bold;
+        background: red;
+        border-radius: 50%;
+        color: white;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        position: absolute;
+        top: -15px;
+        left: 90%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+      }
+
+      span:first-child {
+        opacity: 1;
+        // z-index: 1;
+      }
+      span:nth-child(2) {
+        // position: absolute;
+        left: -35px;
+        border-radius: 15px;
+        opacity: 0;
+        transform: translateX(-50%) scale(0.8);
+        // z-index: 0;
+      }
+      &:hover {
+        span:first-child {
+          opacity: 0;
+          transform: translateX(-50%) scale(1.5);
+        }
+        span:nth-child(2) {
+          opacity: 1;
+          transform: translateX(-50%) scale(1);
+        }
+      }
+    }
+  }
+}
